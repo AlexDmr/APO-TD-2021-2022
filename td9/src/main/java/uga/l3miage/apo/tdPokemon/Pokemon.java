@@ -26,4 +26,5 @@ public abstract class Pokemon {
     }
 
     public abstract double vitesse();
+    public abstract String toString();
 }
