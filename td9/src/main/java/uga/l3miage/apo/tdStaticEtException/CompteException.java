@@ -1,5 +1,6 @@
 package uga.l3miage.apo.tdStaticEtException;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CompteException {
@@ -21,10 +22,18 @@ public class CompteException {
         appelsMethodesClasse++;
         appelsMethodesInstance++;
         System.out.print("Veuillez entrer un entier: ");
-        Scanner scan = new Scanner(System.in);
-        int i = scan.nextInt();
-        // scan.close();
-        return i;
+        int i = 0;
+        boolean inputOK = false;
+        while (!inputOK) {
+            try {
+                Scanner scan = new Scanner(System.in);
+                i = scan.nextInt();
+                inputOK = true;
+            } catch(InputMismatchException e) {
+                System.err.println("ça n'est pas un bon format de nombre !!!");
+            }
+        }
+        return i; 
     }
 
     public void setTable(int n) {

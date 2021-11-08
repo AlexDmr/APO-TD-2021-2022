@@ -10,7 +10,11 @@ public class TestCompteException {
 
         System.out.println("---- Premier Tableau ---");
         CompteException compte01 = new CompteException();
-        compte01.setTable(args);
+        try {
+            compte01.setTable(args);
+        } catch(NumberFormatException e) {
+            System.out.println("Vous devez entrer des entiers au bon format...");
+        }
         System.out.println("Tableau: " + compte01.toString());
         System.out.println("appelsMethodesClasse: " + CompteException.appelsMethodesClasse);
         System.out.println("appelsMethodesInstance: " + compte01.appelsMethodesInstance);
@@ -20,7 +24,7 @@ public class TestCompteException {
         compte02.setTable(3);
         System.out.println("Tableau: " + compte02.toString());
         System.out.println("appelsMethodesClasse: " + CompteException.appelsMethodesClasse);
-        System.out.println("appelsMethodesInstance: " + compte01.appelsMethodesInstance);
+        System.out.println("appelsMethodesInstance: " + compte02.appelsMethodesInstance);
 
     }
 }
