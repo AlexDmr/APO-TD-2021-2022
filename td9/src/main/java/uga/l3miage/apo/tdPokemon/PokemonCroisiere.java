@@ -8,4 +8,8 @@ public class PokemonCroisiere extends PokemonMarin {
     public double vitesse() {
         return (this.getPoids() / 25 * this.getNbNageoires()) / 2;
     }
+
+    public String toString() {
+        return "à faire";
+    }
 }

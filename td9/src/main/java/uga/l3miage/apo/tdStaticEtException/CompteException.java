@@ -23,7 +23,7 @@ public class CompteException {
         System.out.print("Veuillez entrer un entier: ");
         Scanner scan = new Scanner(System.in);
         int i = scan.nextInt();
-        scan.close();
+        // scan.close();
         return i;
     }
 

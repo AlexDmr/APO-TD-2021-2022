@@ -15,5 +15,9 @@ public class PokemonSportif extends PokemonTerre {
     public void setFreq(double freq) {
         this.freq = freq;
     }
+    
+    public String toString() {
+        return "à faire";
+    }
 
 }

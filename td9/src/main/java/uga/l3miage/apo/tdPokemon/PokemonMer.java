@@ -8,4 +8,9 @@ public class PokemonMer extends PokemonMarin {
     public double vitesse() {
         return this.getPoids() / 25 * this.getNbNageoires();
     }
+
+    public String toString() {
+        return "à faire";
+    }
+
 }
